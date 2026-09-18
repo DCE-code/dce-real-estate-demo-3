@@ -77,7 +77,7 @@ body {
 }
 
 .hero-content {
-  min-width: 700px;
+  width: min(100%, 700px);
 }
 
 .hero-tag {
@@ -99,11 +99,11 @@ body {
 }
 
 .hero-text {
-  min-width: 550px;
+  max-width: 550px;
   color: #cccccc;
   font-size: 17px;
   line-height: 1.7;
-  margin: 35px;
+  margin: 35px 0;
 }
 
 .hero-buttons {
@@ -145,7 +145,7 @@ body {
 }
 
 .section-heading {
-  min-width: 650px;
+  max-width: 650px;
   margin-bottom: 55px;
 }
 
@@ -271,42 +271,6 @@ body {
 
 .property-bottom a:hover {
   color: #27c92a;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero-text {
-  font-size: 15px;
-}
-
-.hero-buttons {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.primary-btn,
-.secondary-btn {
-  width: 100%;
-  text-align: center;
-}
-
-.properties {
-  padding: 75px 5%;
-}
-
-.property-grid {
-  grid-template-columns: 1fr;
-}
-
-.property-image {
-  height: 240px;
-}
-
-.property-bottom {
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .about {
@@ -569,7 +533,7 @@ body {
   }
 
   .service-grid {
-    grid-template-columns: 2, 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .contact {
@@ -598,6 +562,42 @@ body {
   .hero {
     padding: 130px 5% 70px;
     min-height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .properties {
+    padding: 75px 5%;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-image {
+    height: 240px;
+  }
+
+  .property-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .about {
